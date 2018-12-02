@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz da Fatec</title>
+  <link rel="stylesheet" type="text/css" href="style2.css" />
+</head>
+<body>
+<div id="quiz">
+  <div id="quiz-header">
+    <h1>Quiz da Fatec</h1>
+    <p><a id="quiz-home-btn">Home</a></p>
+  </div>
+  <div id="quiz-start-screen">
+    <p><a href="#" id="quiz-start-btn" class="quiz-button">Iniciar</a></p>
+  </div>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="jquery.quiz-min.js"></script>
+<script>
+  $('#quiz').quiz({
+    //resultsScreen: '#results-screen',
+    //counter: false,
+    //homeButton: '#custom-home',
+    counterFormat: 'Pergunta %current de %total',
+    questions: [
+      {
+        'q': 'Qual o primeiro curso da Fatec Araras?',
+        'options': [
+          'Corte e costura',
+          'Corta e nao costura',
+          'Tecnico em Informatica',
+          'Sistemas para internet'
+        ],
+        'correctIndex': 3,
+        'correctResponse': 'Show!',
+        'incorrectResponse': 'Voce não esta sabendo.'
+      },
+      {
+        'q': 'Deusa grega?',
+        'options': [
+          'Mitologia Ararense para pessoa bonita e cheirosa',
+          'Irmã de Thor'
+        ],
+        'correctIndex': 0,
+        'correctResponse': 'hehe',
+        'incorrectResponse': 'nop.'
+      },
+      {
+        'q': 'Trenzinho...',
+        'options': [
+          'sempre as sextas-feiras apos horario no ginasio',
+          'sem maquinista nao tem graca',
+          'aceleraaaa',
+        ],
+        'correctIndex': 0,
+        'correctResponse': 'tchu tchu tchu vamos em frente',
+        'incorrectResponse': 'Voce nao esta sendo fatecano o suficiente'
+      },
+      {
+        'q': 'Primeira cantina?',
+        'options': [
+          'Drica delicia',
+          'Drica gente boa'
+        ],
+        'correctIndex': 0,
+        'correctResponse': 'hehey',
+        'incorrectResponse': 'Pelo jeito voce eh vegetariano'
+      },
+      {
+        'q': 'Quando a internet chegou na fatec?',
+        'options': [
+          '1 semestre do curso Sistemas para Internet',
+          '3 semestre do curso Sistemas para Internet',
+          '2 semestre do curso Sistemas para Internet',
+          'Nunca chegou'
+        ],
+        'correctIndex': 2,
+        'correctResponse': 'Ok, voce foi conectado',
+        'incorrectResponse': 'ERROR 404'
+      }
+    ]
+  });
+</script>
+</body>
+</html>
